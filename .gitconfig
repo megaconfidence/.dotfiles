@@ -3,3 +3,5 @@
 [user]
 	email = cokoghenun@gmail.com
 	name = cokoghenun
+[push]
+	default = current
