@@ -115,4 +115,4 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 alias n="nvim"
-alias p="tmux-fzf"
+alias f="tmux-fzf"
