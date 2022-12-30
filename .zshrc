@@ -116,3 +116,4 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 alias n="nvim"
 alias f="tmux-fzf"
+alias tmux="tmux -u" # fixes utf8 fonts in tmux
