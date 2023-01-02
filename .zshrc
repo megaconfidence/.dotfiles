@@ -117,3 +117,4 @@ fi
 alias n="nvim"
 alias f="tmux-fzf"
 alias tmux="tmux -u" # fixes utf8 fonts in tmux
+export OPENCV_VIDEOIO_PRIORITY_INTEL_MFX=0 # fixes howdy opencv on fedora
