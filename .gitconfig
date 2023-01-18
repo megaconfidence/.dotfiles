@@ -2,7 +2,7 @@
 	defaultBranch = main
 [user]
 	email = cokoghenun@gmail.com
-	name = cokoghenun
+	name = megaconfidence
 [push]
 	default = current
 [filter "lfs"]
