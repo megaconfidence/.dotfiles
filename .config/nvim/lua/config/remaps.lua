@@ -10,11 +10,8 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 
---yank/paste to/from clipboard
-vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]])
-vim.keymap.set('n', '<leader>y', [["+Y]])
-vim.keymap.set('n', '<leader>p', [["+P]])
-vim.keymap.set({ 'n', 'v' }, "<leader>d", "\"_d") --replace without loosing yank
+--replace without loosing yank
+vim.keymap.set({ 'n', 'v' }, "<leader>d", "\"_d")
 
 --esc remaps
 vim.keymap.set({ 'i', 'v' }, 'kj', '<esc>')
