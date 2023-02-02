@@ -1,2 +1,8 @@
 .DS_Store
 packer_compiled.lua
+
+.local/
+.config/
+
+!.local/bin/
+!.config/nvim
