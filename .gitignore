@@ -1,8 +1,8 @@
 .DS_Store
 packer_compiled.lua
 
-.local/
-.config/
+# .local/
+# .config/
 
-!.local/bin/
-!.config/nvim
+# !.local/bin/
+# !.config/nvim
