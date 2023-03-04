@@ -11,7 +11,11 @@ vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 
 --replace without loosing yank
-vim.keymap.set({ 'n', 'v' }, "<leader>d", "\"_d")
+vim.keymap.set({ 'n', 'v' }, '<leader>d', "\"_d")
+
+--yank/paste to/from clipboard
+vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+Y]])
+vim.keymap.set({ 'n', 'v' }, '<leader>p', [["+P]])
 
 --esc remaps
 vim.keymap.set({ 'i', 'v' }, 'kj', '<esc>')
