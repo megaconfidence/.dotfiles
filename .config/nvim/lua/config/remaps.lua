@@ -15,8 +15,7 @@ vim.keymap.set({ 'n', 'v' }, '<leader>d', "\"_d")
 
 --yank/paste to/from clipboard
 vim.keymap.set({ 'n', 'v' }, '<leader>p', [["+p]], { desc = 'paste from clipboard' })
-vim.keymap.set({ 'n', 'v' }, '<leader>yy', [["+Y]], { desc = 'yank line to clipboard' })
-vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]], { desc = 'yank selection to clipboard' })
+vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]], { desc = 'yank to clipboard' })
 
 --esc remaps
 vim.keymap.set({ 'i', 'v' }, 'kj', '<esc>')
