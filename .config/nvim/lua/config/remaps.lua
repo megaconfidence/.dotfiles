@@ -14,9 +14,13 @@ vim.keymap.set('n', 'N', 'Nzzzv')
 vim.keymap.set({ 'n', 'v' }, '<leader>d', "\"_d")
 
 --yank/paste to/from clipboard
-vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+Y]])
-vim.keymap.set({ 'n', 'v' }, '<leader>p', [["+P]])
+vim.keymap.set({ 'n', 'v' }, '<leader>p', [["+p]], { desc = 'paste from clipboard' })
+vim.keymap.set({ 'n', 'v' }, '<leader>yy', [["+Y]], { desc = 'yank line to clipboard' })
+vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]], { desc = 'yank selection to clipboard' })
 
 --esc remaps
 vim.keymap.set({ 'i', 'v' }, 'kj', '<esc>')
 vim.keymap.set('c', 'kj', '<C-C>') --command mode
+
+vim.keymap.set('n', '<leader>o', 'm`o<Esc>``', { desc = 'add blank line below' })
+vim.keymap.set('n', '<leader>O', 'm`O<Esc>``', { desc = 'add blank line above' })
