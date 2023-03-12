@@ -1,3 +1,4 @@
+vim.keymap.set('n', '<F1>', ':noh<CR>:echo<CR>', { desc = 'clear highlight after search' })
 --moving highlighted visual blocks
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
@@ -21,5 +22,5 @@ vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]], { desc = 'yank to clipboard' 
 vim.keymap.set({ 'i', 'v' }, 'kj', '<esc>')
 vim.keymap.set('c', 'kj', '<C-C>') --command mode
 
-vim.keymap.set('n', '<leader>o', 'm`o<Esc>``', { desc = 'add blank line below' })
-vim.keymap.set('n', '<leader>O', 'm`O<Esc>``', { desc = 'add blank line above' })
+vim.keymap.set('n', '<leader>o', 'm`o<esc>``', { desc = 'add blank line below' })
+vim.keymap.set('n', '<leader>O', 'm`O<esc>``', { desc = 'add blank line above' })

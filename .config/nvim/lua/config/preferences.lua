@@ -12,7 +12,7 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 
 --search
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 vim.opt.incsearch = true
 vim.opt.smartcase = true
 vim.opt.ignorecase = true
