@@ -1,3 +1,4 @@
+vim.opt.termguicolors = true
 vim.opt.cursorline = true
 --line numbers
 vim.opt.nu = true
@@ -26,6 +27,9 @@ vim.opt.isfname:append('@-@')
 vim.opt.wrap = true
 vim.opt.textwidth = 80
 vim.opt.colorcolumn = '80'
+
+--disable mouse
+vim.opt.mouse = ''
 
 --leader
 vim.g.mapleader = ' '

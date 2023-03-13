@@ -47,6 +47,7 @@ return require('packer').startup(function(use)
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
     use('numToStr/Comment.nvim')
+    use('JoosepAlviste/nvim-ts-context-commentstring')
     use('nvim-tree/nvim-web-devicons')
     use {
         'lewis6991/gitsigns.nvim',
@@ -58,4 +59,5 @@ return require('packer').startup(function(use)
         requires = 'nvim-tree/nvim-web-devicons',
     }
     use('mrjones2014/nvim-ts-rainbow')
+    use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
 end)
