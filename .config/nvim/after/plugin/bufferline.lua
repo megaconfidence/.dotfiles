@@ -8,10 +8,10 @@ require('bufferline').setup {
     }
 }
 vim.keymap.set('n', '<leader>bb', ':BufferLinePick<CR>',
-    { desc = 'Pick duffer', silent = true, noremap = true })
+    { desc = 'Pick duffer', silent = true })
 vim.keymap.set('n', '<leader>bd', ':BufferLinePickClose<CR>',
-    { desc = 'Pick duffer to delete', silent = true, noremap = true })
+    { desc = 'Pick duffer to delete', silent = true })
 vim.keymap.set('n', '<leader>bn', ':BufferLineCycleNext<CR>',
-    { desc = 'Next buffer', silent = true, noremap = true })
+    { desc = 'Next buffer', silent = true })
 vim.keymap.set('n', '<leader>bp', ':BufferLineCyclePrev<CR>',
-    { desc = 'Previous buffer', silent = true, noremap = true })
+    { desc = 'Previous buffer', silent = true })
