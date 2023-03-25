@@ -1,25 +1,38 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
-
--- Only required if you have packer configured as `opt`
-vim.cmd [[packadd packer.nvim]]
-
 return require('packer').startup(function(use)
-  -- Packer can manage itself
+  use 'tpope/vim-fugitive'
   use 'wbthomason/packer.nvim'
-  use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
-    requires = { { 'nvim-lua/plenary.nvim' } }
+  use 'akinsho/bufferline.nvim'
+  use 'ethanholz/nvim-lastplace'
+  use 'nvim-lualine/lualine.nvim'
+  use 'nvim-tree/nvim-web-devicons'
+  use 'mrjones2014/nvim-ts-rainbow'
+  use 'jose-elias-alvarez/null-ls.nvim'
+  use 'akinsho/toggleterm.nvim'
+
+  use 'numToStr/Comment.nvim'
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
+
+  use 'nvim-lua/plenary.nvim' 
+  use 'nvim-telescope/telescope.nvim'
+  use { 'nvim-telescope/telescope-fzf-native.nvim',
+    run = 'make', cond = vim.fn.executable 'make' == 1
   }
-  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 }
-  use({
+  use {
     'patstockwell/vim-monokai-tasty',
     config = function()
       vim.cmd('colorscheme vim-monokai-tasty')
       vim.cmd('let g:vim_monokai_tasty_italic = 1')
     end
-  })
+  }
+  use {
+	  'windwp/nvim-autopairs',
+     config = function() require("nvim-autopairs").setup {} end
+  }
+  use {
+    'lewis6991/gitsigns.nvim',
+    config = function() require('gitsigns').setup() end
+  }
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
-  use('tpope/vim-fugitive')
   use {
     'VonHeikemen/lsp-zero.nvim',
     requires = {
@@ -41,23 +54,4 @@ return require('packer').startup(function(use)
       { 'rafamadriz/friendly-snippets' },
     }
   }
-  use('jose-elias-alvarez/null-ls.nvim')
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-  }
-  use('numToStr/Comment.nvim')
-  use('JoosepAlviste/nvim-ts-context-commentstring')
-  use('nvim-tree/nvim-web-devicons')
-  use {
-    'lewis6991/gitsigns.nvim',
-    config = function() require('gitsigns').setup() end
-  }
-  use('ethanholz/nvim-lastplace')
-  use {
-    'folke/trouble.nvim',
-    requires = 'nvim-tree/nvim-web-devicons',
-  }
-  use('mrjones2014/nvim-ts-rainbow')
-  use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
 end)
