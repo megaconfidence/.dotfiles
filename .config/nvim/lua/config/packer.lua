@@ -1,22 +1,24 @@
 return require('packer').startup(function(use)
+  use 'romainl/vim-cool'
   use 'tpope/vim-fugitive'
   use 'wbthomason/packer.nvim'
   use 'akinsho/bufferline.nvim'
+  use 'akinsho/toggleterm.nvim'
   use 'ethanholz/nvim-lastplace'
   use 'nvim-lualine/lualine.nvim'
   use 'nvim-tree/nvim-web-devicons'
   use 'mrjones2014/nvim-ts-rainbow'
   use 'jose-elias-alvarez/null-ls.nvim'
-  use 'akinsho/toggleterm.nvim'
 
   use 'numToStr/Comment.nvim'
   use 'JoosepAlviste/nvim-ts-context-commentstring'
 
-  use 'nvim-lua/plenary.nvim' 
+  use 'nvim-lua/plenary.nvim'
   use 'nvim-telescope/telescope.nvim'
   use { 'nvim-telescope/telescope-fzf-native.nvim',
     run = 'make', cond = vim.fn.executable 'make' == 1
   }
+
   use {
     'patstockwell/vim-monokai-tasty',
     config = function()
@@ -25,8 +27,8 @@ return require('packer').startup(function(use)
     end
   }
   use {
-	  'windwp/nvim-autopairs',
-     config = function() require("nvim-autopairs").setup {} end
+    'windwp/nvim-autopairs',
+    config = function() require("nvim-autopairs").setup {} end
   }
   use {
     'lewis6991/gitsigns.nvim',
