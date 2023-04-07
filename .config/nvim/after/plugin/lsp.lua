@@ -1,3 +1,4 @@
+local cmp = require('cmp')
 local lsp = require('lsp-zero')
 
 lsp.preset('recommended')
@@ -12,6 +13,13 @@ lsp.ensure_installed({
 --fix undefined global 'vim'
 lsp.configure('lua_ls', {
   settings = { Lua = { diagnostics = { globals = { 'vim' } } } }
+})
+
+--ensure <CR> confirms selection
+cmp.setup({
+  mapping = {
+    ['<CR>'] = cmp.mapping.confirm({select = false}),
+  }
 })
 
 lsp.on_attach(function(client, bufnr)
