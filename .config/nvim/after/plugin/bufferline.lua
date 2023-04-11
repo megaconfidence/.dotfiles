@@ -13,9 +13,9 @@ require('bufferline').setup {
   }
 }
 
-vim.keymap.set('n', '<c-k>', ':BufferLineCycleNext<CR>',
+vim.keymap.set('n', '<tab>', ':BufferLineCycleNext<CR>',
   { desc = 'Next buffer', silent = true })
-vim.keymap.set('n', '<c-j>', ':BufferLineCyclePrev<CR>',
+vim.keymap.set('n', '<s-tab>', ':BufferLineCyclePrev<CR>',
   { desc = 'Previous buffer', silent = true })
 vim.keymap.set('n', '<leader>bb', ':BufferLinePick<CR>',
   { desc = 'Pick duffer', silent = true })
