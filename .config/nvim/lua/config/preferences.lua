@@ -40,8 +40,8 @@ vim.o.undofile = true
 
 --spellchecker & completion
 vim.api.nvim_create_autocmd(
-    { 'BufRead', 'BufNewFile' },
-    { pattern = { '*.txt', '*.md' }, command = 'setlocal spell' }
+  { 'BufRead', 'BufNewFile' },
+  { pattern = { '*.txt', '*.md' }, command = 'setlocal spell' }
 )
 vim.o.completeopt = 'menuone,noselect'
 
@@ -53,9 +53,9 @@ vim.opt.termguicolors = true
 --highlihgt on yank
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
-    callback = function()
-        vim.highlight.on_yank()
-    end,
-    group = highlight_group,
-    pattern = '*',
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = '*',
 })
