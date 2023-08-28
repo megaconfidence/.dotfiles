@@ -10,6 +10,7 @@ null_ls.setup({
     null_ls.builtins.formatting.prettier,
     null_ls.builtins.diagnostics.eslint,
     null_ls.builtins.completion.spell,
+    null_ls.builtins.formatting.rustfmt,
   },
   --auto format on save
   on_attach = function(client, bufnr)
