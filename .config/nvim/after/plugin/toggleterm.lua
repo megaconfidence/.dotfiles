@@ -7,7 +7,7 @@ require("toggleterm").setup{
 }
 
 function _G.set_terminal_keymaps()
-  local opts = {buffer = 0}
+  local opts = {buffer = 0, desc = 'Toggle terminal'}
   vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
 end
 vim.cmd('autocmd! TermOpen term://*toggleterm#* lua set_terminal_keymaps()')

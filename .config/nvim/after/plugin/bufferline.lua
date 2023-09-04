@@ -18,6 +18,6 @@ vim.keymap.set('n', '<tab>', ':BufferLineCycleNext<CR>',
 vim.keymap.set('n', '<s-tab>', ':BufferLineCyclePrev<CR>',
   { desc = 'Previous buffer', silent = true })
 vim.keymap.set('n', '<leader>bb', ':BufferLinePick<CR>',
-  { desc = 'Pick duffer', silent = true })
+  { desc = 'Open buffer', silent = true })
 vim.keymap.set('n', '<leader>bd', ':BufferLinePickClose<CR>',
-  { desc = 'Pick duffer to delete', silent = true })
+  { desc = 'Delete buffer', silent = true })
