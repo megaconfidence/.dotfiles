@@ -1,7 +1,7 @@
 return require('packer').startup(function(use)
   use 'romainl/vim-cool'
   use 'tpope/vim-fugitive'
-  use 'tpope/vim-obsession'
+  use 'rmagatti/auto-session'
   use 'wbthomason/packer.nvim'
   use 'akinsho/bufferline.nvim'
   -- use 'akinsho/toggleterm.nvim'
