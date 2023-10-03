@@ -1,5 +1,9 @@
 # nvim
 
+## Treesitter
+
+Run `:TSUpdate` to fix Treesitter issues after a Neovim upgrade
+
 ## Formatters
 
 - Prettier `npm install -g prettier`
