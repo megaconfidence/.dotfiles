@@ -3,6 +3,7 @@ return require('packer').startup(function(use)
   use 'tpope/vim-fugitive'
   use 'wbthomason/packer.nvim'
   use 'akinsho/bufferline.nvim'
+  use 'tpope/vim-obsession'
   -- use 'akinsho/toggleterm.nvim'
   use 'ethanholz/nvim-lastplace'
   use 'nvim-lualine/lualine.nvim'
