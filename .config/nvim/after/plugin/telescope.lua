@@ -32,9 +32,9 @@ vim.keymap.set('n', '<leader>fb', function()
   builtin.buffers(themes.get_dropdown({ previewer = false }))
 end, { desc = 'Find buffers' })
 
-vim.keymap.set('n', '<leader>fd', function()
-  builtin.diagnostics(themes.get_dropdown({ previewer = false, layout_config = { width = 0.8 } }))
-end, { desc = 'Find diagnostics' })
+-- vim.keymap.set('n', '<leader>fd', function()
+--   builtin.diagnostics(themes.get_dropdown({ previewer = false, layout_config = { width = 0.8 } }))
+-- end, { desc = 'Find diagnostics' })
 
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Find by grep' })
 

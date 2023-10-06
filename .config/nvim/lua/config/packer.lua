@@ -4,11 +4,12 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'akinsho/bufferline.nvim'
   use 'olimorris/persisted.nvim'
+  use 'folke/trouble.nvim'
   -- use 'akinsho/toggleterm.nvim'
   use 'ethanholz/nvim-lastplace'
   use 'nvim-lualine/lualine.nvim'
   use 'nvim-tree/nvim-web-devicons'
-  use 'mrjones2014/nvim-ts-rainbow'
+  use 'HiPhish/rainbow-delimiters.nvim'
   use 'jose-elias-alvarez/null-ls.nvim'
 
   use 'numToStr/Comment.nvim'
