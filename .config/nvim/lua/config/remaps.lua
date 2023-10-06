@@ -18,5 +18,3 @@ vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]], { desc = 'Yank to clipboard' 
 
 vim.keymap.set('n', '<leader>o', 'm`o<esc>``', { desc = 'Add blank line below' })
 vim.keymap.set('n', '<leader>O', 'm`O<esc>``', { desc = 'Add blank line above' })
-
-vim.keymap.set({ 'n', 'v' }, '<leader>fd', ':TroubleToggle<cr>', { silent = true, desc = 'Find diagnostics' })

@@ -54,18 +54,21 @@ Visual mode
 
 ### LSP
 
-| Keymap     | Description             |
-| :--------- | :---------------------- |
-| Leader+DRN | Rename                  |
-| Leader+DCA | Code action             |
-| Leader+DTD | Type definition         |
-| Leader+DSD | Signature documentation |
-| Leader+DH  | Hover documentation     |
-| Leader+DF  | Goto definition         |
-| Leader+DD  | Open diagnostics        |
-| Leader+DK  | Diagnostics prev        |
-| Leader+DJ  | Diagnostics next        |
-| Leader+DI  | Goto implementation     |
+| Keymap    | Description |
+| :-------- | :---------- |
+| Leader+CA | Code action |
+
+<!-- | Keymap     | Description             | -->
+<!-- | :--------- | :---------------------- | -->
+<!-- | Leader+DRN | Rename                  | -->
+<!-- | Leader+DCA | Code action             | -->
+<!-- | Leader+DTD | Type definition         | -->
+<!-- | Leader+DSD | Signature documentation | -->
+<!-- | Leader+DH  | Hover documentation     | -->
+<!-- | Leader+DF  | Goto definition         | -->
+<!-- | Leader+DK  | Diagnostics prev        | -->
+<!-- | Leader+DJ  | Diagnostics next        | -->
+<!-- | Leader+DI  | Goto implementation     | -->
 
 ### Telescope
 
@@ -84,3 +87,13 @@ Visual mode
 <!-- | Keymap  | Description     | -->
 <!-- | :------ | :-------------- | -->
 <!-- | Ctrl+\  | Toggle terminal | -->
+
+### Diagnostics & DAP
+
+| Keymap    | Description        |
+| :-------- | :----------------- |
+| Leader+DT | Toggle diagnostics |
+| Leader+DB | Toggle breakpoint  |
+| Leader+DQ | Quit debugging     |
+| Leader+DC | Continu debugging  |
+| Leader+DN | Next line          |

@@ -1,14 +1,16 @@
 return require('packer').startup(function(use)
   use 'romainl/vim-cool'
   use 'tpope/vim-fugitive'
+  use 'folke/trouble.nvim'
   use 'wbthomason/packer.nvim'
   use 'akinsho/bufferline.nvim'
   use 'olimorris/persisted.nvim'
-  use 'folke/trouble.nvim'
+  use 'simrat39/rust-tools.nvim'
   -- use 'akinsho/toggleterm.nvim'
   use 'ethanholz/nvim-lastplace'
   use 'nvim-lualine/lualine.nvim'
   use 'nvim-tree/nvim-web-devicons'
+  use 'christoomey/vim-tmux-navigator'
   use 'HiPhish/rainbow-delimiters.nvim'
   use 'jose-elias-alvarez/null-ls.nvim'
 
@@ -16,7 +18,11 @@ return require('packer').startup(function(use)
   use 'JoosepAlviste/nvim-ts-context-commentstring'
 
   use 'nvim-lua/plenary.nvim'
+  use 'kosayoda/nvim-lightbulb'
+  use 'aznhe21/actions-preview.nvim'
   use 'nvim-telescope/telescope.nvim'
+  use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
+
   use { 'nvim-telescope/telescope-fzf-native.nvim',
     run = 'make', cond = vim.fn.executable 'make' == 1
   }
