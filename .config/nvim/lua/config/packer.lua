@@ -6,7 +6,6 @@ return require('packer').startup(function(use)
   use 'akinsho/bufferline.nvim'
   use 'olimorris/persisted.nvim'
   use 'simrat39/rust-tools.nvim'
-  -- use 'akinsho/toggleterm.nvim'
   use 'ethanholz/nvim-lastplace'
   use 'nvim-lualine/lualine.nvim'
   use 'nvim-tree/nvim-web-devicons'
@@ -21,6 +20,7 @@ return require('packer').startup(function(use)
   use 'kosayoda/nvim-lightbulb'
   use 'aznhe21/actions-preview.nvim'
   use 'nvim-telescope/telescope.nvim'
+  use 'nvim-telescope/telescope-ui-select.nvim'
   use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
 
   use { 'nvim-telescope/telescope-fzf-native.nvim',

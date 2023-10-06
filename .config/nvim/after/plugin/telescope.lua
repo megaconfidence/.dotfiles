@@ -8,6 +8,11 @@ local builtin = require('telescope.builtin')
 local actions = require('telescope.actions');
 
 telescope.setup {
+   extensions = {
+    ["ui-select"] = {
+      require("telescope.themes").get_dropdown({ previewer = false })
+    },
+  },
   defaults = {
     mappings = {
       i = {
@@ -48,3 +53,5 @@ vim.keymap.set('n', '<leader>fw', function()
 end, { desc = 'Find word in buffer' })
 
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = '[F]ind [H]elp' })
+
+require("telescope").load_extension("ui-select")

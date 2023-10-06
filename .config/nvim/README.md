@@ -82,12 +82,6 @@ Visual mode
 | Leader+FW | Find word in buffer |
 | Leader+FH | Find help           |
 
-<!-- ### ToggleTerm -->
-<!---->
-<!-- | Keymap  | Description     | -->
-<!-- | :------ | :-------------- | -->
-<!-- | Ctrl+\  | Toggle terminal | -->
-
 ### Diagnostics & DAP
 
 | Keymap    | Description        |
