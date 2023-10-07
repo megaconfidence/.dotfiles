@@ -4,11 +4,6 @@
 
 Run `:TSUpdate` to fix Treesitter issues after a Neovim upgrade
 
-## Formatters
-
-- Prettier `npm install -g prettier`
-- rustfmt `rustup component add rustfmt`
-
 ## Keymaps
 
 ### Global
@@ -54,21 +49,14 @@ Visual mode
 
 ### LSP
 
-| Keymap    | Description |
-| :-------- | :---------- |
-| Leader+CA | Code action |
-
-<!-- | Keymap     | Description             | -->
-<!-- | :--------- | :---------------------- | -->
-<!-- | Leader+DRN | Rename                  | -->
-<!-- | Leader+DCA | Code action             | -->
-<!-- | Leader+DTD | Type definition         | -->
-<!-- | Leader+DSD | Signature documentation | -->
-<!-- | Leader+DH  | Hover documentation     | -->
-<!-- | Leader+DF  | Goto definition         | -->
-<!-- | Leader+DK  | Diagnostics prev        | -->
-<!-- | Leader+DJ  | Diagnostics next        | -->
-<!-- | Leader+DI  | Goto implementation     | -->
+| Keymap     | Description         |
+| :--------- | :------------------ |
+| Leader+LT  | Toggle diagnostics  |
+| Leader+LA  | Code action         |
+| Leader+LR  | Rename              |
+| Leader+LD  | Hover documentation |
+| Leader+LDD | Goto definition     |
+| Leader+LI  | Goto implementation |
 
 ### Telescope
 
@@ -82,18 +70,12 @@ Visual mode
 | Leader+FW | Find word in buffer |
 | Leader+FH | Find help           |
 
-<!-- ### ToggleTerm -->
-<!---->
-<!-- | Keymap  | Description     | -->
-<!-- | :------ | :-------------- | -->
-<!-- | Ctrl+\  | Toggle terminal | -->
-
 ### Diagnostics & DAP
 
-| Keymap    | Description        |
-| :-------- | :----------------- |
-| Leader+DT | Toggle diagnostics |
-| Leader+DB | Toggle breakpoint  |
-| Leader+DQ | Quit debugging     |
-| Leader+DC | Continu debugging  |
-| Leader+DN | Next line          |
+| Keymap    | Description       |
+| :-------- | :---------------- |
+| Leader+DB | Toggle breakpoint |
+| Leader+DQ | Quit debugging    |
+| Leader+DC | Continu debugging |
+| Leader+DN | Next line         |
+| Leader+DU | Toggle debug ui   |
