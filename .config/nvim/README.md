@@ -10,6 +10,10 @@ Run `:TSUpdate` to fix Treesitter issues after a Neovim upgrade
 
 | Keymap         | Description                      |
 | :------------- | :------------------------------- |
+| K              | Hover fold                       |
+| za             | Toggle fold                      |
+| zR             | Open all fold                    |
+| zM             | Close all folds                  |
 | Shift+K        | Move highlight visual block up   |
 | Shift+J        | Move highlight visual block down |
 | Leader+D       | Delete without loosing yank      |
