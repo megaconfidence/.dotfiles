@@ -1,22 +1,8 @@
 return require("packer").startup(function(use)
 	use("romainl/vim-cool")
-	use("WhoIsSethDaniel/lualine-lsp-progress.nvim")
 	use("tpope/vim-fugitive")
-	use("folke/trouble.nvim")
-	use("nvim-lua/plenary.nvim")
 	use("numToStr/Comment.nvim")
-	use("wbthomason/packer.nvim")
-	use("akinsho/bufferline.nvim")
-	use("ethanholz/nvim-lastplace")
-	use("nvim-lualine/lualine.nvim")
-	use({ "kosayoda/nvim-lightbulb" })
-	use("nvim-tree/nvim-web-devicons")
-	use({ "olimorris/persisted.nvim" })
 	use("christoomey/vim-tmux-navigator")
-	use("HiPhish/rainbow-delimiters.nvim")
-	use("JoosepAlviste/nvim-ts-context-commentstring")
-	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
-	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
 	use({ "nvim-telescope/telescope.nvim", requires = { "nvim-telescope/telescope-ui-select.nvim" } })
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make", cond = vim.fn.executable("make") == 1 })
 	use({
@@ -25,12 +11,18 @@ return require("packer").startup(function(use)
 			require("nvim-autopairs").setup({})
 		end,
 	})
-	use({
-		"lewis6991/gitsigns.nvim",
-		config = function()
-			require("gitsigns").setup()
-		end,
-	})
+
+	-- utils
+	use("nvim-lua/plenary.nvim")
+	use("wbthomason/packer.nvim")
+
+	-- sesson restore
+	use("farmergreg/vim-lastplace")
+	use({ "olimorris/persisted.nvim" })
+
+	-- colors
+	use("nvim-tree/nvim-web-devicons")
+	use("HiPhish/rainbow-delimiters.nvim")
 	use({
 		"patstockwell/vim-monokai-tasty",
 		config = function()
@@ -38,6 +30,26 @@ return require("packer").startup(function(use)
 			vim.cmd("let g:vim_monokai_tasty_italic = 1")
 		end,
 	})
+
+	-- debugging
+	use("folke/trouble.nvim")
+	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
+
+	-- status signs
+	use({
+		"lewis6991/gitsigns.nvim",
+		config = function()
+			require("gitsigns").setup()
+		end,
+	})
+	use("kosayoda/nvim-lightbulb")
+	use("akinsho/bufferline.nvim")
+	use("luukvbaal/statuscol.nvim")
+	use("nvim-lualine/lualine.nvim")
+	use("WhoIsSethDaniel/lualine-lsp-progress.nvim")
+
+	--folding
+	use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
 
 	-- formatting and linting
 	use("stevearc/conform.nvim")
@@ -51,6 +63,10 @@ return require("packer").startup(function(use)
 			{ "WhoIsSethDaniel/mason-tool-installer.nvim" },
 		},
 	})
+
+	-- treesitter
+	use("JoosepAlviste/nvim-ts-context-commentstring")
+	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 
 	-- lsp
 	use("simrat39/rust-tools.nvim")
