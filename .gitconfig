@@ -14,3 +14,5 @@
 	rebase = false
 [core]
 	excludesfile = ~/.dotfiles/.gitignore_global
+[mergetool]
+	keepBackup = false
