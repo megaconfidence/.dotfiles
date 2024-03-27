@@ -33,6 +33,7 @@ return require("packer").startup(function(use)
 
 	-- debugging
 	use("folke/trouble.nvim")
+	use("nvim-neotest/nvim-nio")
 	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
 
 	-- status signs
