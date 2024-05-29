@@ -16,3 +16,5 @@
 	excludesfile = ~/.dotfiles/.gitignore_global
 [mergetool]
 	keepBackup = false
+[include]
+	path = /Users/megaconfidence/.local/share/cloudflare-warp-certs/gitconfig

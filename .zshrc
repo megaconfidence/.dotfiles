@@ -115,6 +115,7 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 alias n="nvim"
+alias c3="npm create cloudflare@latest" # shortcut for c3
 alias tmux="tmux -u" # fixes utf8 fonts in tmux
 export OPENCV_VIDEOIO_PRIORITY_INTEL_MFX=0 # fixes howdy opencv on fedora
 
