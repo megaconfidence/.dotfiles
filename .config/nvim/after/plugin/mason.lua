@@ -19,7 +19,7 @@ mason_lspconfig.setup({
 		"cssls",
 		"lua_ls",
 		"eslint",
-		"tsserver",
+		"ts_ls",
 		"rust_analyzer",
 	},
 	automatic_installation = true,

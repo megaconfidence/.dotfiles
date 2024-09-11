@@ -22,7 +22,12 @@ local on_attach = function(_, bufnr)
 	vim.keymap.set("n", "<leader>ldd", vim.lsp.buf.declaration, opts)
 end
 
-vim.keymap.set({ "n", "v" }, "<leader>lt", "<cmd>TroubleToggle<cr>", { silent = true, desc = "Lsp diagnostics" })
+vim.keymap.set(
+	{ "n", "v" },
+	"<leader>lt",
+	"<cmd>Trouble diagnostics toggle<cr>",
+	{ silent = true, desc = "Lsp diagnostics" }
+)
 
 -- turn off inline diagnostics
 vim.diagnostic.config({ virtual_text = false })
