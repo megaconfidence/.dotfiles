@@ -33,6 +33,7 @@ return require("packer").startup(function(use)
 
 	-- debugging
 	use("folke/trouble.nvim")
+
 	use({ "rcarriga/nvim-dap-ui", requires = { { "mfussenegger/nvim-dap" }, { "nvim-neotest/nvim-nio" } } })
 
 	-- status signs
@@ -67,6 +68,7 @@ return require("packer").startup(function(use)
 	-- treesitter
 	use("JoosepAlviste/nvim-ts-context-commentstring")
 	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
+	use("davidmh/mdx.nvim")
 
 	-- lsp
 	use("simrat39/rust-tools.nvim")
