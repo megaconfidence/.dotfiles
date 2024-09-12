@@ -1,3 +1,4 @@
+require("trouble").setup()
 local lspconfig = require("lspconfig")
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local get_servers = require("mason-lspconfig").get_installed_servers
