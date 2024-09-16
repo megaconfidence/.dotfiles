@@ -19,6 +19,7 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
 })
 
 -- cli args to eslint_d
+-- eslint_d config error thread https://github.com/mfussenegger/nvim-lint/issues/462
 local eslint = lint.linters.eslint_d
 
 eslint.args = {

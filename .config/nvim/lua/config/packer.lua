@@ -23,11 +23,18 @@ return require("packer").startup(function(use)
 	-- colors
 	use("nvim-tree/nvim-web-devicons")
 	use("HiPhish/rainbow-delimiters.nvim")
+	-- use({
+	-- "patstockwell/vim-monokai-tasty",
+	-- config = function()
+	-- 	vim.cmd("colorscheme vim-monokai-tasty")
+	-- 	vim.cmd("let g:vim_monokai_tasty_italic = 1")
+	-- end,
+	-- })
 	use({
-		"patstockwell/vim-monokai-tasty",
+		"catppuccin/nvim",
+		as = "catppuccin",
 		config = function()
-			vim.cmd("colorscheme vim-monokai-tasty")
-			vim.cmd("let g:vim_monokai_tasty_italic = 1")
+			vim.cmd.colorscheme("catppuccin-latte")
 		end,
 	})
 
