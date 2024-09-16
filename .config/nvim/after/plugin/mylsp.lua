@@ -1,4 +1,4 @@
-require("trouble").setup()
+local trouble = require("trouble")
 local lspconfig = require("lspconfig")
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local get_servers = require("mason-lspconfig").get_installed_servers
@@ -23,6 +23,14 @@ local on_attach = function(_, bufnr)
 	vim.keymap.set("n", "<leader>ldd", vim.lsp.buf.declaration, opts)
 end
 
+-- trouble config
+trouble.setup({
+	win = {
+		wo = {
+			wrap = true,
+		},
+	},
+})
 vim.keymap.set(
 	{ "n", "v" },
 	"<leader>lt",
