@@ -1,4 +1,5 @@
 require("bufferline").setup({
+	highlights = require("catppuccin.groups.integrations.bufferline").get(),
 	options = {
 		numbers = "buffer_id",
 		show_buffer_icons = false,
