@@ -6,3 +6,6 @@ TERM = "xterm-256color"
 [font]
 normal = { family = "FiraCode Nerd Font", style = "Regular" }
 size = 18
+
+[window]
+startup_mode = "Maximized"
