@@ -1,4 +1,3 @@
-local trouble = require("trouble")
 local lspconfig = require("lspconfig")
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local get_servers = require("mason-lspconfig").get_installed_servers
@@ -22,21 +21,6 @@ local on_attach = function(_, bufnr)
 	opts.desc = "Go to declaration"
 	vim.keymap.set("n", "<leader>ldd", vim.lsp.buf.declaration, opts)
 end
-
--- trouble config
-trouble.setup({
-	win = {
-		wo = {
-			wrap = true,
-		},
-	},
-})
-vim.keymap.set(
-	{ "n", "v" },
-	"<leader>lt",
-	"<cmd>Trouble diagnostics toggle<cr>",
-	{ silent = true, desc = "Lsp diagnostics" }
-)
 
 -- turn off inline diagnostics
 vim.diagnostic.config({ virtual_text = false })
