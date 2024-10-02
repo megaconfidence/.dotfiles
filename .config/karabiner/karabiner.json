@@ -1,43 +1,70 @@
 {
-    "profiles": [
+  "profiles": [
+    {
+      "complex_modifications": {
+        "rules": [
+          {
+            "description": "Swap Option with Control for Alacritty.",
+            "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": ["^org\\.alacritty$"],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": { "key_code": "left_option" },
+                "to": [{ "key_code": "left_control" }],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": ["^org\\.alacritty$"],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": { "key_code": "right_option" },
+                "to": [{ "key_code": "right_control" }],
+                "type": "basic"
+              }
+            ]
+          }
+        ]
+      },
+      "devices": [
         {
-            "complex_modifications": {
-                "rules": [
-                    {
-                        "description": "Swap Option with Control for Alacritty.",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^org\\.alacritty$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": { "key_code": "left_option" },
-                                "to": [{ "key_code": "left_control" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^org\\.alacritty$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": { "key_code": "right_option" },
-                                "to": [{ "key_code": "right_control" }],
-                                "type": "basic"
-                            }
-                        ]
-                    }
-                ]
+          "identifiers": {
+            "product_id": 45929,
+            "vendor_id": 1133
+          },
+          "simple_modifications": [
+            {
+              "from": {
+                "key_code": "grave_accent_and_tilde"
+              },
+              "to": [
+                {
+                  "key_code": "left_shift"
+                }
+              ]
             },
-            "name": "Default profile",
-            "selected": true
+            {
+              "from": {
+                "key_code": "non_us_backslash"
+              },
+              "to": [
+                {
+                  "key_code": "grave_accent_and_tilde"
+                }
+              ]
+            }
+          ],
+          "treat_as_built_in_keyboard": false
         }
-    ]
+      ],
+      "name": "Default profile",
+      "selected": true
+    }
+  ]
 }
