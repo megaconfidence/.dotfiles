@@ -36,19 +36,13 @@
               {
                 "conditions": [
                   {
-                    "keyboard_types": ["iso"],
-                    "type": "keyboard_type_if"
-                  }
-                ],
-                "from": { "key_code": "grave_accent_and_tilde" },
-                "to": [{ "key_code": "left_shift" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "keyboard_types": ["iso"],
-                    "type": "keyboard_type_if"
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "product_id": 45929,
+                        "vendor_id": 1133
+                      }
+                    ]
                   }
                 ],
                 "from": { "key_code": "non_us_backslash" },
