@@ -27,41 +27,46 @@
                 "from": { "key_code": "right_option" },
                 "to": [{ "key_code": "right_control" }],
                 "type": "basic"
+              },
+              {
+                "description": "Tilde modifications for UK (iso) keyboards",
+                "manipulators": [
+                  {
+                    "conditions": [
+                      {
+                        "keyboard_types": ["iso"],
+                        "type": "keyboard_type_if"
+                      }
+                    ],
+                    "from": { "key_code": "grave_accent_and_tilde" },
+                    "to": [{ "key_code": "left_shift" }],
+                    "type": "basic"
+                  },
+                  {
+                    "conditions": [
+                      {
+                        "keyboard_types": ["iso"],
+                        "type": "keyboard_type_if"
+                      }
+                    ],
+                    "from": { "key_code": "non_us_backslash" },
+                    "to": [{ "key_code": "grave_accent_and_tilde" }],
+                    "type": "basic"
+                  }
+                ]
               }
             ]
           }
         ]
       },
-      "devices": [
-        {
-          "identifiers": { "is_keyboard": true },
-          "ignore": true
-        },
-        {
-          "identifiers": {
-            "is_keyboard": true,
-            "product_id": 45929,
-            "vendor_id": 1133
-          },
-          "simple_modifications": [
-            {
-              "from": { "key_code": "grave_accent_and_tilde" },
-              "to": [{ "key_code": "left_shift" }]
-            },
-            {
-              "from": { "key_code": "non_us_backslash" },
-              "to": [{ "key_code": "grave_accent_and_tilde" }]
-            }
-          ]
-        }
-      ],
+      "devices": [],
       "name": "Default profile",
       "selected": true,
       "virtual_hid_keyboard": {
         "country_code": 0,
         "keyboard_type_v2": "ansi"
       }
-    }
+    },
+    { "name": "New profile" }
   ]
 }
-
