@@ -27,33 +27,33 @@
                 "from": { "key_code": "right_option" },
                 "to": [{ "key_code": "right_control" }],
                 "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Tilde modifications for UK (iso) keyboards",
+            "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "keyboard_types": ["iso"],
+                    "type": "keyboard_type_if"
+                  }
+                ],
+                "from": { "key_code": "grave_accent_and_tilde" },
+                "to": [{ "key_code": "left_shift" }],
+                "type": "basic"
               },
               {
-                "description": "Tilde modifications for UK (iso) keyboards",
-                "manipulators": [
+                "conditions": [
                   {
-                    "conditions": [
-                      {
-                        "keyboard_types": ["iso"],
-                        "type": "keyboard_type_if"
-                      }
-                    ],
-                    "from": { "key_code": "grave_accent_and_tilde" },
-                    "to": [{ "key_code": "left_shift" }],
-                    "type": "basic"
-                  },
-                  {
-                    "conditions": [
-                      {
-                        "keyboard_types": ["iso"],
-                        "type": "keyboard_type_if"
-                      }
-                    ],
-                    "from": { "key_code": "non_us_backslash" },
-                    "to": [{ "key_code": "grave_accent_and_tilde" }],
-                    "type": "basic"
+                    "keyboard_types": ["iso"],
+                    "type": "keyboard_type_if"
                   }
-                ]
+                ],
+                "from": { "key_code": "non_us_backslash" },
+                "to": [{ "key_code": "grave_accent_and_tilde" }],
+                "type": "basic"
               }
             ]
           }
