@@ -2,9 +2,9 @@ local trouble = require("trouble")
 
 trouble.setup({
 	focus = true,
-	warn_no_results = false,
-	open_no_results = true,
 	auto_preview = false,
+	open_no_results = true,
+	warn_no_results = false,
 	win = {
 		wo = {
 			wrap = true,
