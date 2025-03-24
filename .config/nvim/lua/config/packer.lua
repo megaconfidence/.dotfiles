@@ -23,13 +23,6 @@ return require("packer").startup(function(use)
 	-- colors
 	use("nvim-tree/nvim-web-devicons")
 	use("HiPhish/rainbow-delimiters.nvim")
-	-- use({
-	-- "patstockwell/vim-monokai-tasty",
-	-- config = function()
-	-- 	vim.cmd("colorscheme vim-monokai-tasty")
-	-- 	vim.cmd("let g:vim_monokai_tasty_italic = 1")
-	-- end,
-	-- })
 	use({
 		"catppuccin/nvim",
 		as = "catppuccin",
@@ -39,8 +32,6 @@ return require("packer").startup(function(use)
 	})
 
 	-- debugging
-	use("folke/trouble.nvim")
-
 	use({ "rcarriga/nvim-dap-ui", requires = { { "mfussenegger/nvim-dap" }, { "nvim-neotest/nvim-nio" } } })
 
 	-- status signs

@@ -17,9 +17,10 @@ mason_lspconfig.setup({
 	ensure_installed = {
 		"html",
 		"cssls",
+		"ts_ls",
 		"lua_ls",
 		"eslint",
-		"ts_ls",
+		"svelte",
 		"rust_analyzer",
 	},
 	automatic_installation = true,

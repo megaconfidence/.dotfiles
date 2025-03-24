@@ -53,4 +53,8 @@ end, { desc = "Find word in buffer" })
 
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "[F]ind [H]elp" })
 
+vim.keymap.set("n", "<leader>fd", function()
+	builtin.diagnostics(themes.get_dropdown({ bufnr = 0, line_width = "full", wrap_results = true }))
+end, { desc = "[F]ind [D]iagnostics" })
+
 require("telescope").load_extension("ui-select")
