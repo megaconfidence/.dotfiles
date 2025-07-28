@@ -1,13 +1,14 @@
 require("bufferline").setup({
 	highlights = require("catppuccin.groups.integrations.bufferline").get(),
 	options = {
-		numbers = "buffer_id",
+		numbers = "none",
 		show_buffer_icons = false,
 		show_buffer_close_icons = false,
 		separator_style = "thin",
 		custom_filter = function(buf_number, buf_numbers)
-			--hide netrw filetype
-			if vim.bo[buf_number].filetype ~= "" then
+			if vim.bo[buf_number].filetype ~= "" then -- hide netrw
+				return true
+			elseif vim.fn.bufname(buf_number):match(".*") then -- show dotfiles i.e .dev.vars
 				return true
 			end
 		end,
