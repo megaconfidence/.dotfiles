@@ -1,0 +1,5 @@
+# show .env and .dev.vars in Telescope and Ripgrep https://tinyurl.com/597rhmzr
+!.env
+!*/.env
+!.dev.vars
+!*/.dev.vars
