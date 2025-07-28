@@ -32,7 +32,33 @@
           }
         ]
       },
-      "devices": [],
+      "devices": [
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "product_id": 45929,
+            "vendor_id": 1133
+          },
+          "simple_modifications": [
+            {
+              "from": { "key_code": "grave_accent_and_tilde" },
+              "to": [{ "key_code": "left_shift" }]
+            },
+            {
+              "from": { "key_code": "non_us_backslash" },
+              "to": [{ "key_code": "grave_accent_and_tilde" }]
+            }
+          ]
+        },
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "product_id": 668,
+            "vendor_id": 76
+          },
+          "treat_as_built_in_keyboard": true
+        }
+      ],
       "name": "Default profile",
       "selected": true,
       "virtual_hid_keyboard": {
