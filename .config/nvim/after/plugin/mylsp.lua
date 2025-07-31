@@ -54,8 +54,7 @@ lspconfig["lua_ls"].setup({
 })
 
 local rt = require("rust-tools")
-local codelldb = require("mason-registry").get_package("codelldb")
-local extension_path = codelldb:get_install_path() .. "/extension/"
+local extension_path = vim.env.MASON .. "/packages/codelldb/extension/"
 local codelldb_path = extension_path .. "adapter/codelldb"
 local liblldb_path = extension_path .. "lldb/lib/liblldb"
 
