@@ -132,3 +132,8 @@ export PATH="$WASMTIME_HOME/bin:$PATH"
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/megaconfidence/.lmstudio/bin"
+
+export PATH="$HOME/.local/bin:$PATH"
+
+# Enable vi mode
+set -o vi
