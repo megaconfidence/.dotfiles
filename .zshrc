@@ -137,3 +137,6 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # opencode
 export PATH=/Users/megaconfidence/.opencode/bin:$PATH
+
+# Enable vi mode
+set -o vi
