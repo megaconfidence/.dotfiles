@@ -205,3 +205,7 @@ automatically-unhide-macos-hidden-apps = false
 [[on-window-detected]]
     if.app-id = 'com.wulkano.kap'
     run = 'layout floating'
+
+[[on-window-detected]]
+    if.app-id = 'com.elgato.CameraHub'
+    run = 'layout floating'
