@@ -187,12 +187,12 @@ automatically-unhide-macos-hidden-apps = false
 
 [[on-window-detected]]
     if.app-id = 'org.alacritty'
-    run = 'move-node-to-workspace 4'
+    run = 'move-node-to-workspace 5'
 
 [[on-window-detected]]
     if.app-id = 'com.google.Chrome'
     check-further-callbacks = true
-    run = 'move-node-to-workspace 2'
+    run = 'move-node-to-workspace 3'
 
 [[on-window-detected]]
     if.app-id = 'com.apple.finder'
@@ -200,7 +200,7 @@ automatically-unhide-macos-hidden-apps = false
 
 [[on-window-detected]]
     if.app-id = 'org.mozilla.firefox'
-    run = 'move-node-to-workspace 1'
+    run = 'move-node-to-workspace 2'
 
 [[on-window-detected]]
     if.app-id = 'com.wulkano.kap'

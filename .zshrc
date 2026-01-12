@@ -140,3 +140,6 @@ export PATH=/Users/megaconfidence/.opencode/bin:$PATH
 
 # Enable vi mode
 set -o vi
+
+# Added by Antigravity
+export PATH="/Users/megaconfidence/.antigravity/antigravity/bin:$PATH"

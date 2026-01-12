@@ -1,4 +1,3 @@
-local lspconfig = require("lspconfig")
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local get_servers = require("mason-lspconfig").get_installed_servers
 
@@ -32,46 +31,53 @@ for type, icon in pairs(signs) do
 	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 end
 
--- configure all lsp servers except rust_analyzer
-for _, server_name in ipairs(get_servers()) do
-	if server_name ~= "rust_analyzer" then
-		lspconfig[server_name].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-	end
-end
+-- apply capabilities to ALL servers
+vim.lsp.config("*", { capabilities = capabilities })
+
+-- define global on_attach behavior via Autocommand
+vim.api.nvim_create_autocmd("LspAttach", {
+	callback = function(args)
+		local client = vim.lsp.get_client_by_id(args.data.client_id)
+		local bufnr = args.buf
+		on_attach(client, bufnr)
+	end,
+})
+
+-- enable all lsp servers except rust_analyzer
+vim.lsp.enable(vim.tbl_filter(function(s)
+	return s ~= "rust_analyzer"
+end, get_servers()))
 
 -- fix undefined global 'vim'
-lspconfig["lua_ls"].setup({
-	settings = {
-		Lua = {
-			diagnostics = {
-				globals = { "vim" },
+-- lspconfig["lua_ls"].setup({
+-- 	settings = {
+-- 		Lua = {
+-- 			diagnostics = {
+-- 				globals = { "vim" },
+-- 			},
+-- 		},
+-- 	},
+-- })
+
+vim.g.rustaceanvim = function()
+	local extension_path = vim.env.MASON .. "/packages/codelldb/extension/"
+	local codelldb_path = extension_path .. "adapter/codelldb"
+	local liblldb_path = extension_path .. "lldb/lib/liblldb"
+
+	-- The liblldb extension is .so for linux and .dylib for macOS
+	liblldb_path = liblldb_path .. (vim.loop.os_uname().sysname == "Linux" and ".so" or ".dylib")
+	return {
+		server = {
+			on_attach = on_attach,
+			capabilities = capabilities,
+		},
+		tools = {
+			hover_actions = {
+				auto_focus = true,
 			},
 		},
-	},
-})
-
-local rt = require("rust-tools")
-local extension_path = vim.env.MASON .. "/packages/codelldb/extension/"
-local codelldb_path = extension_path .. "adapter/codelldb"
-local liblldb_path = extension_path .. "lldb/lib/liblldb"
-
--- The liblldb extension is .so for linux and .dylib for macOS
-liblldb_path = liblldb_path .. (vim.loop.os_uname().sysname == "Linux" and ".so" or ".dylib")
-
-rt.setup({
-	dap = {
-		adapter = require("rust-tools.dap").get_codelldb_adapter(codelldb_path, liblldb_path),
-	},
-	server = {
-		on_attach = on_attach,
-		capabilities = capabilities,
-	},
-	tools = {
-		hover_actions = {
-			auto_focus = true,
+		dap = {
+			adapter = require("rustaceanvim.config").get_codelldb_adapter(codelldb_path, liblldb_path),
 		},
-	},
-})
+	}
+end

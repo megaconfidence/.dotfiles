@@ -18,7 +18,7 @@ mason_lspconfig.setup({
 		"html",
 		"cssls",
 		"ts_ls",
-		"lua_ls",
+		-- "lua_ls",
 		"eslint",
 		"svelte",
 		"rust_analyzer",
@@ -28,7 +28,7 @@ mason_lspconfig.setup({
 
 mason_tool_installer.setup({
 	ensure_installed = {
-		"stylua",
+		-- "stylua",
 		-- eslint_d config error thread https://github.com/mfussenegger/nvim-lint/issues/462
 		{ "eslint_d", version = "13.1.2" },
 		"codelldb",

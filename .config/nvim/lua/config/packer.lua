@@ -69,7 +69,7 @@ return require("packer").startup(function(use)
 	use("davidmh/mdx.nvim")
 
 	-- lsp
-	use("simrat39/rust-tools.nvim")
+	use("mrcjkb/rustaceanvim")
 	use({
 		"neovim/nvim-lspconfig",
 		requires = {
