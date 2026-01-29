@@ -210,5 +210,9 @@ automatically-unhide-macos-hidden-apps = false
     if.app-id = 'com.elgato.CameraHub'
     run = 'layout floating'
 
+[[on-window-detected]]
+    if.app-id = 'com.apple.ScreenSharing'
+    run = 'layout floating'
+
 [workspace-to-monitor-force-assignment]
     9 = 'secondary'
