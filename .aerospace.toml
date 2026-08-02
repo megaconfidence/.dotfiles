@@ -189,10 +189,10 @@ automatically-unhide-macos-hidden-apps = false
     if.app-id = 'org.alacritty'
     run = 'move-node-to-workspace 5'
 
-[[on-window-detected]]
-    if.app-id = 'com.google.Chrome'
-    check-further-callbacks = true
-    run = 'move-node-to-workspace 3'
+# [[on-window-detected]]
+#     if.app-id = 'com.google.Chrome'
+#     check-further-callbacks = true
+#     run = 'move-node-to-workspace 3'
 
 [[on-window-detected]]
     if.app-id = 'com.apple.finder'
