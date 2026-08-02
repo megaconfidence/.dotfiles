@@ -120,26 +120,15 @@ alias c3="npm create cloudflare@latest" # shortcut for c3
 alias tmux="tmux -u" # fixes utf8 fonts in tmux
 export OPENCV_VIDEOIO_PRIORITY_INTEL_MFX=0 # fixes howdy opencv on fedora
 
-# iterm integration
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# wasmtime
-export WASMTIME_HOME="$HOME/.wasmtime"
-export PATH="$WASMTIME_HOME/bin:$PATH"
-
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/megaconfidence/.lmstudio/bin"
-
-export PATH="$HOME/.local/bin:$PATH"
 
 # opencode
 export PATH=/Users/megaconfidence/.opencode/bin:$PATH
 
+# opencode-see-image: route vision through Cloudflare Workers AI kimi-k2.6
+export SEE_IMAGE_PROVIDER=cloudflare-workers-ai
+export SEE_IMAGE_MODEL=@cf/moonshotai/kimi-k2.6
+
 # Enable vi mode
 set -o vi
-
-# Added by Antigravity
-export PATH="/Users/megaconfidence/.antigravity/antigravity/bin:$PATH"
