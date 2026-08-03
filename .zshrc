@@ -117,7 +117,7 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 alias n="nvim"
 alias c3="npm create cloudflare@latest" # shortcut for c3
-alias tmux="tmux -u" # fixes utf8 fonts in tmux
+#alias tmux="tmux -u" # fixes utf8 fonts in tmux
 export OPENCV_VIDEOIO_PRIORITY_INTEL_MFX=0 # fixes howdy opencv on fedora
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
