@@ -1,5 +1,11 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "share": "disabled",
+  "permission": {
+    "external_directory": {
+      "~/tmp/**": "allow",
+    },
+  },
   "mcp": {
     "chrome-browser": {
       "type": "local",
@@ -8,50 +14,47 @@
         "-y",
         "chrome-devtools-mcp@latest",
         "--autoConnect",
-        "--no-usage-statistics"
+        "--no-usage-statistics",
       ],
-      "enabled": true
-    }
+      "enabled": true,
+    },
   },
   "provider": {
     "confidence.house": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "confidence.house",
       "options": {
-        "baseURL": "https://litellm.confidence.house/v1"
+        "baseURL": "https://litellm.confidence.house/v1",
       },
       "models": {
         "pro": {
           "name": "pro",
           "limit": {
             "context": 262114,
-            "output": 65536
-          }
+            "output": 65536,
+          },
         },
         "mini": {
           "name": "mini",
           "limit": {
             "context": 1048576,
-            "output": 384000
+            "output": 384000,
           },
           "variants": {
             "max": {
               "reasoningEffort": "max",
               "textVerbosity": "low",
-              "reasoningSummary": "auto"
+              "reasoningSummary": "auto",
             },
             "high": {
               "reasoningEffort": "high",
               "textVerbosity": "low",
-              "reasoningSummary": "auto"
-            }
-          }
-        }
-      }
-    }
+              "reasoningSummary": "auto",
+            },
+          },
+        },
+      },
+    },
   },
-  "plugin": [
-    "opencode-see-image"
-  ]
+  "plugin": ["opencode-see-image"],
 }
-

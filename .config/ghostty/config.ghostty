@@ -1,0 +1,5 @@
+theme = Catppuccin Latte
+font-family = "FiraCode Nerd Font"
+font-style = "Retina"
+font-size = 16
+macos-titlebar-proxy-icon = hidden
