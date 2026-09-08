@@ -132,3 +132,6 @@ export SEE_IMAGE_MODEL=@cf/moonshotai/kimi-k2.6
 
 # Enable vi mode
 set -o vi
+
+# replace rm with safe-rm
+alias rm='safe-rm'
