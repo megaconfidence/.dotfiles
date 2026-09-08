@@ -1,6 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+typeset -U path PATH
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -106,14 +108,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
-# adds homebrew to $PATH
-if [ -d "/opt/homebrew/bin" ] ; then
-    PATH="/opt/homebrew/bin:$PATH"
-fi
-
 # add ~/.local/bin to $PATH
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
+if [[ -d "$HOME/.local/bin" ]]; then
+  path=("$HOME/.local/bin" $path)
 fi
 alias n="nvim"
 alias c3="npm create cloudflare@latest" # shortcut for c3
@@ -124,7 +121,9 @@ export OPENCV_VIDEOIO_PRIORITY_INTEL_MFX=0 # fixes howdy opencv on fedora
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # opencode
-export PATH=/Users/megaconfidence/.opencode/bin:$PATH
+if [[ -d "$HOME/.opencode/bin" ]]; then
+  path=("$HOME/.opencode/bin" $path)
+fi
 
 # opencode-see-image: route vision through Cloudflare Workers AI kimi-k2.6
 export SEE_IMAGE_PROVIDER=cloudflare-workers-ai
@@ -132,6 +131,3 @@ export SEE_IMAGE_MODEL=@cf/moonshotai/kimi-k2.6
 
 # Enable vi mode
 set -o vi
-
-# replace rm with safe-rm
-alias rm='safe-rm'

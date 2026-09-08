@@ -1,28 +1,7 @@
 # dotfiles
+
 My dotfile collection
 
-## Install list
+## Shell secrets
 
-### Stow
-```sh
-sudo dnf install stow
-```
-```sh
-brew install stow
-```
-
-### Ripgrep
-```sh
-sudo dnf install ripgrep
-```
-```sh
-brew install ripgrep
-```
-
-### FzF
-```sh
-sudo dnf install fzf
-```
-```sh
-brew install fzf
-```
+The tracked `.zshenv` sources `~/.config/zsh/secrets.zsh` for every Zsh shell, including non-interactive shells. Store local API key exports there and do not commit the secrets file.
