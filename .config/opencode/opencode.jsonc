@@ -14,10 +14,19 @@
         "-y",
         "chrome-devtools-mcp@latest",
         "--autoConnect",
-        "--no-usage-statistics",
+        "--no-usage-statistics"
       ],
-      "enabled": true,
+      "enabled": true
     },
+    "executor": {
+      "type": "local",
+      "command": [
+        "executor",
+        "mcp"
+      ],
+      "environment": {},
+      "enabled": true
+    }
   },
   "provider": {
     "confidence.house": {
