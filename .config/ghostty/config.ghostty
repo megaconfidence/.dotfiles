@@ -3,3 +3,6 @@ font-family = "FiraCode Nerd Font"
 font-style = "Retina"
 font-size = 16
 macos-titlebar-proxy-icon = hidden
+
+# first window attaches to tmux, or starts it (which triggers continuum's restore)
+initial-command = shell:/opt/homebrew/bin/tmux attach || exec /opt/homebrew/bin/tmux
