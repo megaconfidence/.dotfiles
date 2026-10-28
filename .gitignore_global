@@ -3,3 +3,5 @@
 
 # Firecrawl
 .firecrawl/
+
+**/.claude/settings.local.json

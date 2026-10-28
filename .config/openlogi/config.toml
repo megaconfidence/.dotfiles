@@ -1,0 +1,116 @@
+schema_version = 9
+selected_device = "serial:2615zal7xf78"
+
+[app_settings]
+launch_at_login = true
+check_for_updates = true
+auto_install_updates = true
+update_prompt_seen = true
+show_in_menu_bar = true
+capture_mouse_events = true
+smooth_scroll = false
+vertical_scroll_sensitivity = 14
+app_icon = "openlogi"
+auto_download_assets = true
+asset_source = "automatic"
+thumbwheel_sensitivity = 14
+appearance = "system"
+ui_scale = "normal"
+device_view_mode = "grid"
+mouse_profile_target = "pointer"
+low_battery_notifications = true
+lock_key_notifications = true
+animate_desktop_switch = true
+
+[devices]
+
+[devices."camera:046d:085b:serial:17c79bff".camera_profiles."Custom 1"]
+brightness = 216
+contrast = 130
+exposure = 416
+exposure_auto = 1
+focus = 0
+focus_auto = 1
+low_light_compensation = 0
+power_line_frequency = 2
+saturation = 140
+sharpness = 122
+white_balance = 2944
+white_balance_auto = 1
+zoom = 100
+
+[devices."camera:046d:085b:serial:17c79bff".camera_controls]
+brightness = 136
+contrast = 130
+exposure_auto = 1
+exposure = 558
+zoom = 500
+white_balance_auto = 1
+white_balance = 5562
+low_light_compensation = 1
+
+[devices."camera:046d:085b:serial:17c79bff"]
+
+[devices."serial:2615zal7xf78".identity]
+display_name = "MX Master 4"
+codename = "MX Master 4"
+kind = "mouse"
+
+[devices."serial:2615zal7xf78".identity.model_info]
+entity_count = 4
+unit_id = [
+    0,
+    0,
+    0,
+    0,
+]
+model_ids = [
+    45122,
+    0,
+    0,
+]
+extended_model_id = 5
+
+[keyboard]
+
+[devices."serial:2615zal7xf78".identity.model_info.transports]
+usb = false
+equad = false
+btle = true
+bluetooth = false
+
+[devices."serial:2615zal7xf78".identity.capabilities]
+buttons = true
+pointer = true
+lighting = false
+scroll_inversion = true
+hires_wheel = true
+thumbwheel = true
+haptic_feedback = true
+haptic_panel = true
+dpi_gestures = true
+fn_lock = false
+os_layout = false
+report_rate = false
+backlight = false
+easy_switch = true
+virtual_thumbwheel = false
+pointer_scaling = false
+
+[devices."serial:2615zal7xf78".links."receiver:289d123d65b38d10:slot:2".capabilities]
+buttons = true
+pointer = true
+lighting = false
+scroll_inversion = true
+hires_wheel = true
+thumbwheel = true
+haptic_feedback = true
+haptic_panel = true
+dpi_gestures = true
+fn_lock = false
+os_layout = false
+report_rate = false
+backlight = false
+easy_switch = true
+virtual_thumbwheel = false
+pointer_scaling = false

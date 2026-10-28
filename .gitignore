@@ -3,6 +3,15 @@
 packer_compiled.lua
 .config/opencode/skills/
 
+# Keep these untracked
+.config/htop/
+.config/karabiner/automatic_backups/
+.config/opencode/cli.json
+.config/opencode/service.json
+.config/uv/
+.config/openlogi/*
+!.config/openlogi/config.toml
+
 # .local/
 # .config/
 

@@ -1,0 +1,93 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "share": "disabled",
+  "permission": {
+    "external_directory": {
+      "~/tmp/**": "allow",
+    },
+  },
+  "mcp": {
+    "chrome-browser": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "chrome-devtools-mcp@latest",
+        "--autoConnect",
+        "--no-usage-statistics"
+      ],
+      "enabled": true
+    },
+    "executor": {
+      "type": "local",
+      "command": [
+        "executor",
+        "mcp"
+      ],
+      "environment": {},
+      "enabled": true
+    }
+  },
+  "provider": {
+    "foundry-anthropic": {
+      "npm": "@ai-sdk/anthropic",
+      "name": "Foundry Anthropic",
+      "options": {
+        "baseURL": "https://foundry-proxy.cheetah-koi.ts.net/anthropic/v1",
+        "apiKey": "{env:ANTHROPIC_FOUNDRY_API_KEY}",
+      },
+      "models": {
+        "claude-opus-5-5": {
+          "name": "Claude Opus 5.5",
+          "attachment": true,
+          "reasoning": true,
+          "tool_call": true,
+          "modalities": {
+            "input": ["text", "image", "pdf"],
+            "output": ["text"],
+          },
+          "limit": {
+            "context": 1000000,
+            "output": 64000,
+          },
+        },
+      },
+    },
+    "confidence.house": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "confidence.house",
+      "options": {
+        "baseURL": "https://litellm.confidence.house/v1",
+      },
+      "models": {
+        "pro": {
+          "name": "pro",
+          "limit": {
+            "context": 262114,
+            "output": 65536,
+          },
+        },
+        "mini": {
+          "name": "mini",
+          "limit": {
+            "context": 1048576,
+            "output": 384000,
+          },
+          "variants": {
+            "max": {
+              "reasoningEffort": "max",
+              "textVerbosity": "low",
+              "reasoningSummary": "auto",
+            },
+            "high": {
+              "reasoningEffort": "high",
+              "textVerbosity": "low",
+              "reasoningSummary": "auto",
+            },
+          },
+        },
+      },
+    },
+  },
+  "plugin": ["opencode-see-image@1.4.0"],
+}

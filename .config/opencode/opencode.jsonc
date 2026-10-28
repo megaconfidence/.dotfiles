@@ -7,26 +7,33 @@
     },
   },
   "mcp": {
-    "chrome-browser": {
+    "firefox": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@mozilla/firefox-devtools-mcp@latest",
+        "--tool-preset developer",
+      ],
+      "enabled": false,
+    },
+    "chrome": {
       "type": "local",
       "command": [
         "npx",
         "-y",
         "chrome-devtools-mcp@latest",
         "--autoConnect",
-        "--no-usage-statistics"
+        "--no-usage-statistics",
       ],
-      "enabled": true
+      "enabled": true,
     },
     "executor": {
       "type": "local",
-      "command": [
-        "executor",
-        "mcp"
-      ],
+      "command": ["executor", "mcp"],
       "environment": {},
-      "enabled": true
-    }
+      "enabled": true,
+    },
   },
   "provider": {
     "foundry-anthropic": {
@@ -68,24 +75,20 @@
         "mini": {
           "name": "mini",
           "limit": {
-            "context": 1048576,
-            "output": 384000,
-          },
-          "variants": {
-            "max": {
-              "reasoningEffort": "max",
-              "textVerbosity": "low",
-              "reasoningSummary": "auto",
-            },
-            "high": {
-              "reasoningEffort": "high",
-              "textVerbosity": "low",
-              "reasoningSummary": "auto",
-            },
+            "context": 262114,
+            "output": 65536,
           },
         },
       },
     },
   },
-  "plugin": ["opencode-see-image@1.4.1"],
+  "plugin": [
+    [
+      "opencode-see-image@1.4.1",
+      {
+        "provider": "cloudflare-workers-ai",
+        "model": "@cf/zai-org/glm-5.3-flash",
+      },
+    ],
+  ],
 }
