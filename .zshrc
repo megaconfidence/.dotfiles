@@ -125,9 +125,5 @@ if [[ -d "$HOME/.opencode/bin" ]]; then
   path=("$HOME/.opencode/bin" $path)
 fi
 
-# opencode-see-image: route vision through Cloudflare Workers AI kimi-k2.6
-export SEE_IMAGE_PROVIDER=cloudflare-workers-ai
-export SEE_IMAGE_MODEL=@cf/moonshotai/kimi-k2.6
-
 # Enable vi mode
 set -o vi
