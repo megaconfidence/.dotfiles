@@ -29,6 +29,28 @@
     }
   },
   "provider": {
+    "foundry-anthropic": {
+      "npm": "@ai-sdk/anthropic",
+      "name": "Foundry Anthropic",
+      "options": {
+        "baseURL": "https://foundry-proxy.cheetah-koi.ts.net/anthropic/v1",
+        "apiKey": "{env:ANTHROPIC_FOUNDRY_API_KEY}",
+      },
+      "models": {
+        "claude-opus-5-5": {
+          "name": "Claude Opus 5.5",
+          "tool_call": true,
+          "modalities": {
+            "input": ["text", "image", "pdf"],
+            "output": ["text"],
+          },
+          "limit": {
+            "context": 1000000,
+            "output": 64000,
+          },
+        },
+      },
+    },
     "confidence.house": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "confidence.house",
@@ -65,5 +87,5 @@
       },
     },
   },
-  "plugin": ["opencode-see-image"],
+  "plugin": ["opencode-see-image@1.4.1"],
 }
