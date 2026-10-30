@@ -82,13 +82,4 @@
       },
     },
   },
-  "plugin": [
-    [
-      "opencode-see-image@1.4.1",
-      {
-        "provider": "cloudflare-workers-ai",
-        "model": "@cf/zai-org/glm-5.3-flash",
-      },
-    ],
-  ],
 }
