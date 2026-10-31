@@ -4,6 +4,7 @@ packer_compiled.lua
 .config/opencode/skills/
 
 # Keep these untracked
+.config/zsh/
 .config/htop/
 .config/karabiner/automatic_backups/
 .config/opencode/cli.json
