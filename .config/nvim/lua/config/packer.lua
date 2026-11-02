@@ -67,6 +67,9 @@ return require("packer").startup(function(use)
 	use({ "nvim-treesitter/nvim-treesitter", branch = "main", run = ":TSUpdate" })
 	use("davidmh/mdx.nvim")
 
+	-- markdown
+	use("MeanderingProgrammer/render-markdown.nvim")
+
 	-- lsp
 	use("mrcjkb/rustaceanvim")
 	use({

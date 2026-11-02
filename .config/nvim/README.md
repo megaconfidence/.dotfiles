@@ -56,6 +56,14 @@ Operator-pending mode
 | :----- | :------------------------------------------- |
 | GC     | Text object for a comment block (e.g. DGC)   |
 
+### Markdown
+
+Markdown is rendered in-buffer by [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim). It is on by default and shows raw text in insert mode.
+
+| Keymap    | Description             |
+| :-------- | :---------------------- |
+| Leader+MP | Toggle markdown preview |
+
 ### LSP
 
 | Keymap     | Description         |
