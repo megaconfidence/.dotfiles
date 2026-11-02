@@ -1,10 +1,25 @@
-require("nvim-treesitter.config").setup({
-	ensure_installed = { "javascript", "typescript", "python", "cpp", "c", "lua", "rust", "svelte" },
-	indent = { enable = true, disable = { "python" } },
-	highlight = { enable = true },
-	rainbow = {
-		enable = true,
-		extended_mode = true,
-		max_file_lines = nil,
-	},
+-- nvim-treesitter main branch: installs parsers only, features are enabled per buffer below
+require("nvim-treesitter").install({
+	"javascript",
+	"typescript",
+	"tsx",
+	"python",
+	"cpp",
+	"c",
+	"lua",
+	"rust",
+	"svelte",
+	"toml",
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+	group = vim.api.nvim_create_augroup("treesitter_start", { clear = true }),
+	callback = function(args)
+		if not pcall(vim.treesitter.start, args.buf) then
+			return
+		end
+		if vim.bo[args.buf].filetype ~= "python" then
+			vim.bo[args.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+		end
+	end,
 })
