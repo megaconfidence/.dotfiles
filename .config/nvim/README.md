@@ -33,23 +33,28 @@ Run `:TSUpdate` to fix Treesitter issues after a Neovim upgrade
 
 ### Comment
 
+Uses Neovim's built-in commenting.
+
 Normal mode
 
-| Keymap              | Description                                                        |
-| :------------------ | :----------------------------------------------------------------- |
-| GCC                 | Toggles the current line using linewise comment                    |
-| GBC                 | Toggles the current line using blockwise comment                   |
-| [count]+GCC         | Toggles the number of line given as a prefix-count using linewise  |
-| [count]+GBC         | Toggles the number of line given as a prefix-count using blockwise |
-| GC+[count]+{motion} | (Op-pending) Toggles the region using linewise comment             |
-| GB+[count]+{motion} | (Op-pending) Toggles the region using blockwise comment            |
+| Keymap      | Description                                        |
+| :---------- | :------------------------------------------------- |
+| GCC         | Toggles the current line                           |
+| [count]+GCC | Toggles the number of lines given as prefix-count  |
+| GC+{motion} | (Op-pending) Toggles the region                    |
+| GCGC        | Uncomments the current comment block               |
 
 Visual mode
 
-| Keymap | Description                                |
-| :----- | :----------------------------------------- |
-| GC     | Toggles the region using linewise comment  |
-| GB     | Toggles the region using blockwise comment |
+| Keymap | Description         |
+| :----- | :------------------ |
+| GC     | Toggles the region  |
+
+Operator-pending mode
+
+| Keymap | Description                                  |
+| :----- | :------------------------------------------- |
+| GC     | Text object for a comment block (e.g. DGC)   |
 
 ### LSP
 

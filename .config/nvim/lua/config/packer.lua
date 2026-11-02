@@ -1,7 +1,6 @@
 return require("packer").startup(function(use)
 	use("romainl/vim-cool")
 	use("tpope/vim-fugitive")
-	use("numToStr/Comment.nvim")
 	use("christoomey/vim-tmux-navigator")
 	use({ "nvim-telescope/telescope.nvim", requires = { "nvim-telescope/telescope-ui-select.nvim" } })
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make", cond = vim.fn.executable("make") == 1 })

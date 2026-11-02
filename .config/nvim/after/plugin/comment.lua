@@ -1,18 +1,24 @@
-require("Comment").setup({
-	pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
+-- Native commenting (gc/gcc), with treesitter-aware commentstring (e.g. JSX)
+require("ts_context_commentstring").setup({
+	enable_autocmd = false,
 })
---[[
-NORMAL MODE
-gcc - Toggles the current line using linewise comment
-gbc - Toggles the current line using blockwise comment
-[count]gcc - Toggles the number of line given as a prefix-count using linewise
-[count]gbc - Toggles the number of line given as a prefix-count using blockwise
-gc[count]{motion} - (Op-pending) Toggles the region using linewise comment
-gb[count]{motion} - (Op-pending) Toggles the region using blockwise comment 
-]]
+
+local get_option = vim.filetype.get_option
+vim.filetype.get_option = function(filetype, option)
+	return option == "commentstring" and require("ts_context_commentstring.internal").calculate_commentstring()
+		or get_option(filetype, option)
+end
 
 --[[
+NORMAL MODE
+gcc - Toggles the current line
+[count]gcc - Toggles the number of lines given as a prefix-count
+gc{motion} - (Op-pending) Toggles the region
+gcgc - Uncomments the current comment block
+
 VISUAL MODE
-gc - Toggles the region using linewise comment
-gb - Toggles the region using blockwise comment 
+gc - Toggles the region
+
+OPERATOR-PENDING MODE
+gc - Text object for a comment block (e.g. dgc)
 ]]
