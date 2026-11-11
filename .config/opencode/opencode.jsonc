@@ -94,17 +94,9 @@
       "models": {
         "pro": {
           "name": "pro",
-          "limit": {
-            "context": 262114,
-            "output": 65536,
-          },
         },
         "mini": {
           "name": "mini",
-          "limit": {
-            "context": 262114,
-            "output": 65536,
-          },
         },
       },
     },
