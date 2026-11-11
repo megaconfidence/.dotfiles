@@ -127,3 +127,13 @@ fi
 
 # Enable vi mode
 set -o vi
+# >>> Mistral >>>
+export PATH="/Users/megaconfidence/.mistral/bin:$PATH"
+# <<< Mistral <<<
+
+# bun completions
+[ -s "/Users/megaconfidence/.bun/_bun" ] && source "/Users/megaconfidence/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
