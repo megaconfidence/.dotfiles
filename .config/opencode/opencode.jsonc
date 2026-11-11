@@ -37,16 +37,17 @@
     },
   },
   "provider": {
-    "foundry-anthropic": {
+    "ltellm-anthropic": {
       "npm": "@ai-sdk/anthropic",
-      "name": "Foundry Anthropic",
+      "name": "litellm-anthropic",
       "options": {
-        "baseURL": "https://foundry-proxy.cheetah-koi.ts.net/anthropic/v1",
-        "apiKey": "{env:ANTHROPIC_FOUNDRY_API_KEY}",
+        "baseURL": "{env:LITELLM_BASE_URL}/v1",
+        "apiKey": "{env:LITELLM_API_KEY}",
       },
       "models": {
-        "claude-opus-5-5": {
+        "vertex_ai/claude-opus-5-5": {
           "name": "Claude Opus 5.5",
+          "reasoning": true,
           "tool_call": true,
           "modalities": {
             "input": ["text", "image", "pdf"],
@@ -55,6 +56,31 @@
           "limit": {
             "context": 1000000,
             "output": 64000,
+          },
+        },
+      },
+    },
+    "ltellm-openai": {
+      "npm": "@ai-sdk/openai",
+      "name": "litellm-openai",
+      "options": {
+        "baseURL": "{env:LITELLM_BASE_URL}",
+        "apiKey": "{env:LITELLM_API_KEY}",
+      },
+      "models": {
+        "azure_ai/gpt-6.1-sol": {
+          "name": "GPT-6.1 Sol",
+          "tool_call": true,
+          "reasoning": true,
+          "attachment": true,
+          "modalities": {
+            "input": ["text", "image", "pdf"],
+            "output": ["text"],
+          },
+          "limit": {
+            "context": 1050000,
+            "input": 922000,
+            "output": 128000,
           },
         },
       },
